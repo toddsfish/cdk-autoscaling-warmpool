@@ -2,7 +2,19 @@ import { awscdk } from 'projen';
 import { NpmAccess } from 'projen/lib/javascript';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Todd Bryant',
-  authorAddress: 'hello@toddaas.com',
+  authorAddress: 'hello@pandanus.cloud',
+  description:
+    'This AWS CDK construct can be used to define an EC2 Autoscaling Group Warm Pool',
+  keywords: [
+    'awscdk',
+    'aws-cdk',
+    'aws',
+    'ec2 autoscaling',
+    'autoscaling',
+    'warmpool',
+    'warmpools',
+    'lifecycle hook',
+  ],
   cdkVersion: '2.133.0',
   defaultReleaseBranch: 'main',
   jsiiVersion: '~5.0.0',

@@ -1,5 +1,6 @@
 {
   "name": "@pandanus-cloud/cdk-autoscaling-warmpool",
+  "description": "This AWS CDK construct can be used to define an EC2 Autoscaling Group Warm Pool",
   "repository": {
     "type": "git",
     "url": "https://github.com/toddsfish/cdk-autoscaling-warmpool.git"
@@ -29,7 +30,7 @@
   },
   "author": {
     "name": "Todd Bryant",
-    "email": "hello@toddaas.com",
+    "email": "hello@pandanus.cloud",
     "organization": false
   },
   "devDependencies": {
@@ -59,7 +60,15 @@
     "constructs": "^10.0.5"
   },
   "keywords": [
-    "cdk"
+    "autoscaling",
+    "aws",
+    "aws-cdk",
+    "awscdk",
+    "cdk",
+    "ec2 autoscaling",
+    "lifecycle hook",
+    "warmpool",
+    "warmpools"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
