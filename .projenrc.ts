@@ -1,4 +1,5 @@
 import { awscdk } from 'projen';
+import { NpmAccess } from 'projen/lib/javascript';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Todd Bryant',
   authorAddress: 'hello@toddaas.com',
@@ -9,6 +10,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
   repositoryUrl: 'https://github.com/toddsfish/cdk-autoscaling-warmpool.git',
   docgen: false,
+  npmAccess: NpmAccess.PUBLIC,
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
