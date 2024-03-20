@@ -26,14 +26,6 @@ export class WarmPool extends Construct {
       poolState: as.PoolState.STOPPED,
     });
 
-    // //Create Warm Pool on autoscaling group
-    // new as.WarmPool(this, 'asgWarmPool', {
-    //   autoScalingGroup: asg,
-    //   maxGroupPreparedCapacity: 1,
-    //   minSize: 1,
-    //   poolState: as.PoolState.STOPPED,
-    // });
-
     //Create IAM policy to allow Lambda to call CompleteLifecycleAction on ASG
     const warmPoolLCHookIamPolicy = new iam.Policy(
       this,
