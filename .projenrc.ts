@@ -8,7 +8,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: 'cdk-autoscaling-warmpool',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/toddsfish/cdk-autoscaling-warmpool.git',
-
+  docgen: false,
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
