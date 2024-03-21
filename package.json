@@ -1,6 +1,6 @@
 {
   "name": "@pandanus-cloud/cdk-autoscaling-warmpool",
-  "description": "This AWS CDK construct can be used to define an EC2 Autoscaling Group Warm Pool catering for the Warmed:Pending:Wait Lifecycle Hook state https://blog.toddaas.com/posts/ec2_warm_pools_are_useful_part_1/",
+  "description": "This AWS CDK construct can be used to define an EC2 Autoscaling Group with a Warm Pool catering for the Warmed:Pending:Wait Lifecycle Hook state https://blog.toddaas.com/posts/ec2_warm_pools_are_useful_part_1/",
   "repository": {
     "type": "git",
     "url": "https://github.com/toddsfish/cdk-autoscaling-warmpool.git"
