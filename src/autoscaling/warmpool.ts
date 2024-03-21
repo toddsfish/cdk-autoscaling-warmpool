@@ -19,7 +19,7 @@ export class WarmPool extends Construct {
 
     const { asg } = props;
 
-    // Create Warmpool on ASG
+    // Create Warmpool on the ASG
     asg.addWarmPool({
       maxGroupPreparedCapacity: 1,
       minSize: 1,
