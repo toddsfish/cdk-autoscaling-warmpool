@@ -4,7 +4,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Todd Bryant',
   authorAddress: 'hello@pandanus.cloud',
   description:
-    'This AWS CDK construct can be used to define an EC2 Autoscaling Group Warm Pool',
+    'This AWS CDK construct can be used to define an EC2 Autoscaling Group Warm Pool catering for the Warmed:Pending:Wait Lifecycle Hook state https://blog.toddaas.com/posts/ec2_warm_pools_are_useful_part_1/',
   keywords: [
     'awscdk',
     'aws-cdk',
