@@ -1,4 +1,3 @@
-import { readFileSync } from 'fs';
 import * as cdk from 'aws-cdk-lib';
 import * as as from 'aws-cdk-lib/aws-autoscaling';
 import * as cwe from 'aws-cdk-lib/aws-events';
