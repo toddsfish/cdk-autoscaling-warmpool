@@ -9,7 +9,9 @@ import { Construct } from 'constructs';
 // Warmpool Construct requires an Autoscaling group object passed to it
 export interface WarmPoolProps extends cdk.StackProps {
   readonly asg: as.AutoScalingGroup;
-  readonly state: 'RUNNING' | 'STOPPED' | 'HIBERNATED';
+  readonly state?: 'RUNNING' | 'STOPPED' | 'HIBERNATED';
+  readonly minPoolSize?: number;
+  readonly maxPreparedCapacity?: number;
 }
 
 // Warmpool construct
@@ -18,7 +20,7 @@ export class WarmPool extends Construct {
     super(scope, id);
 
     // Destructure assignment from WarmPoolProps - destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
-    const { asg, state } = props;
+    const { asg, state, minPoolSize, maxPreparedCapacity } = props;
 
     let asgWarmPoolState;
     switch (state) {
@@ -31,15 +33,12 @@ export class WarmPool extends Construct {
       case 'HIBERNATED':
         asgWarmPoolState = as.PoolState.HIBERNATED;
         break;
-      default:
-        asgWarmPoolState = as.PoolState.RUNNING;
-        break;
     }
 
     // Create Warmpool on the ASG
     asg.addWarmPool({
-      maxGroupPreparedCapacity: 1,
-      minSize: 1,
+      maxGroupPreparedCapacity: maxPreparedCapacity,
+      minSize: minPoolSize,
       poolState: asgWarmPoolState,
     });
 
