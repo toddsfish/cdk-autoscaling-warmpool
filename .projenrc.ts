@@ -25,6 +25,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   releaseToNpm: true,
   npmAccess: NpmAccess.PUBLIC,
   npmProvenance: true,
+  // Projen automatically updates dependancies as part of github actions - below auto approves them
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
