@@ -9,6 +9,7 @@ import { Construct } from 'constructs';
 // Warmpool Construct requires an Autoscaling group object passed to it
 export interface WarmPoolProps extends cdk.StackProps {
   readonly asg: as.AutoScalingGroup;
+  readonly state: 'RUNNING' | 'STOPPED' | 'HIBERNATED';
 }
 
 // Warmpool construct
@@ -16,13 +17,31 @@ export class WarmPool extends Construct {
   constructor(scope: Construct, id: string, props: WarmPoolProps) {
     super(scope, id);
 
+    // Destructure assignment from WarmPoolProps
     const { asg } = props;
+    const { state } = props;
+
+    let asgWarmPoolState;
+    switch (state) {
+      case 'RUNNING':
+        asgWarmPoolState = as.PoolState.RUNNING;
+        break;
+      case 'STOPPED':
+        asgWarmPoolState = as.PoolState.STOPPED;
+        break;
+      case 'HIBERNATED':
+        asgWarmPoolState = as.PoolState.HIBERNATED;
+        break;
+      default:
+        asgWarmPoolState = as.PoolState.RUNNING;
+        break;
+    }
 
     // Create Warmpool on the ASG
     asg.addWarmPool({
       maxGroupPreparedCapacity: 1,
       minSize: 1,
-      poolState: as.PoolState.STOPPED,
+      poolState: asgWarmPoolState,
     });
 
     //Create IAM policy to allow Lambda to call CompleteLifecycleAction on ASG
