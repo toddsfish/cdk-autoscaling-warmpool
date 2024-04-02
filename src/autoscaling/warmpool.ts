@@ -17,9 +17,8 @@ export class WarmPool extends Construct {
   constructor(scope: Construct, id: string, props: WarmPoolProps) {
     super(scope, id);
 
-    // Destructure assignment from WarmPoolProps
-    const { asg } = props;
-    const { state } = props;
+    // Destructure assignment from WarmPoolProps - destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+    const { asg, state } = props;
 
     let asgWarmPoolState;
     switch (state) {
