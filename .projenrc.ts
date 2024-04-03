@@ -21,7 +21,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: '@pandanus-cloud/cdk-autoscaling-warmpool',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/toddsfish/cdk-autoscaling-warmpool.git',
-  docgen: false,
+  docgen: true,
   releaseToNpm: true,
   npmAccess: NpmAccess.PUBLIC,
   npmProvenance: true,
