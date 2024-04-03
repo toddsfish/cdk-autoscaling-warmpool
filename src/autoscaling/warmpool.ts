@@ -14,7 +14,7 @@ export interface WarmPoolProps extends cdk.StackProps {
   readonly maxPreparedCapacity?: number;
 }
 
-// Warmpool construct
+// Warmpool Construct
 export class WarmPool extends Construct {
   constructor(scope: Construct, id: string, props: WarmPoolProps) {
     super(scope, id);
