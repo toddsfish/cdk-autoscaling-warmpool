@@ -9,9 +9,9 @@ import { Construct } from 'constructs';
 // Warmpool Construct requires an Autoscaling group object passed to it
 export interface WarmPoolProps extends cdk.StackProps {
   readonly asg: as.AutoScalingGroup;
-  readonly state: 'RUNNING' | 'STOPPED' | 'HIBERNATED';
-  readonly minPoolSize: number;
-  readonly maxPreparedCapacity: number;
+  readonly state?: 'RUNNING' | 'STOPPED' | 'HIBERNATED';
+  readonly minPoolSize?: number;
+  readonly maxPreparedCapacity?: number;
 }
 
 // Warmpool construct
