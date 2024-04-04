@@ -37,9 +37,9 @@ export class WarmPool extends Construct {
       case 'HIBERNATED':
         asgWarmPoolState = as.PoolState.HIBERNATED;
         break;
-      default:
-        asgWarmPoolState = as.PoolState.RUNNING;
-        break;
+      // default:
+      //   asgWarmPoolState = as.PoolState.RUNNING;
+      //   break;
     }
 
     // Create Warmpool on the ASG
