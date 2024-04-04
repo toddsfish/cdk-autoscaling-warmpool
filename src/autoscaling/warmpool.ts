@@ -6,11 +6,15 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { Construct } from 'constructs';
 
-// Warmpool Construct requires an Autoscaling group object passed to it
+// Warmpool Props
 export interface WarmPoolProps extends cdk.StackProps {
+  // The Auto Scaling group to add the warm pool to.
   readonly asg: as.AutoScalingGroup;
+  // The instance state to transition to after the lifecycle actions are complete.
   readonly state?: 'RUNNING' | 'STOPPED' | 'HIBERNATED';
+  // The minimum number of instances to maintain in the warm pool.
   readonly minPoolSize?: number;
+  // The maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
   readonly maxPreparedCapacity?: number;
 }
 
