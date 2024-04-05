@@ -2,6 +2,8 @@
 
 https://blog.toddaas.com/posts/ec2_warm_pools_are_useful_part_1/#you-guessed-it-more-automation
 
+[![View on Construct Hub](https://constructs.dev/badge?package=%40pandanus-cloud%2Fcdk-autoscaling-warmpool)](https://constructs.dev/packages/@pandanus-cloud/cdk-autoscaling-warmpool)
+
 # Install
 
 ## Typescript
@@ -59,5 +61,3 @@ or
       maxPreparedCapacity: 1,
       minPoolSize: 1,
     });
-
-[![View on Construct Hub](https://constructs.dev/badge?package=%40pandanus-cloud%2Fcdk-autoscaling-warmpool)](https://constructs.dev/packages/@pandanus-cloud/cdk-autoscaling-warmpool)
