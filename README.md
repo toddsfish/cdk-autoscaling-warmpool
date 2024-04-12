@@ -1,6 +1,7 @@
 # Overview
 
-https://blog.toddaas.com/posts/ec2_warm_pools_are_useful_part_1/#you-guessed-it-more-automation
+https://blog.toddaas.com/posts/ec2_warm_pools_are_useful_part_1/
+https://blog.toddaas.com/posts/ec2_warm_pools_are_useful_part_2/
 
 [![View on Construct Hub](https://constructs.dev/badge?package=%40pandanus-cloud%2Fcdk-autoscaling-warmpool)](https://constructs.dev/packages/@pandanus-cloud/cdk-autoscaling-warmpool)
 
